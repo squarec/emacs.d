@@ -28,9 +28,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; key bindings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; (when (eq system-type 'darwin) ;; mac specific settings
-;;  (setq mac-option-modifier 'meta))
-(setq mac-option-modifier 'super)
+(when (eq system-type 'darwin) ;; mac specific settings
+  ;;(setq mac-option-modifier 'meta)
+  (setq mac-option-modifier 'super))
+
 (define-key global-map [?\s-l] 'goto-line)
 
 
