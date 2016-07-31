@@ -3,10 +3,18 @@
 ;; optional: this is the evil state that evil-magit will use
 ;; (setq evil-magit-state 'normal)
 ;; optional: disable additional bindings for yanking text
-;; (setq evil-magit-use-y-for-yank nil)
-;;(require 'evil-magit)
-(require 'evil)
-(evil-mode 1)
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; EVIL related
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'init-evil)
+
+(global-set-key (kbd "C-c +") 'evil-numbers/inc-at-pt)
+(global-set-key (kbd "C-c -") 'evil-numbers/dec-at-pt)
+(evil-leader/set-key "a" 'evil-numbers/inc-at-pt)
+(evil-leader/set-key "x" 'evil-numbers/dec-at-pt)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; windows-num mode
@@ -26,12 +34,13 @@
 (define-key global-map [?\s-l] 'goto-line)
 
 
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Language Support
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (set-language-environment 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 
 (provide 'init-local)
-
 
 
 
