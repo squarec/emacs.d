@@ -17,12 +17,12 @@
 ;; (require 'window-number)
 ;; (window-number-mode 1)
 
-(require 'window-numbering)
+;;(require 'window-numbering)
 ;; (defun window-numbering-get-number-string (&optional window)
 ;; (let ((s (int-to-string (window-numbering-get-number window))))
 ;;  (propertize (concat " " s " ") 'face 'window-numbering-face)
 ;;))
-(window-numbering-mode 1)
+;;(window-numbering-mode 1)
 
 ;;(evil-leader/set-key "0" 'select-window-0)
 ;;(evil-leader/set-key "1" 'select-window-1)
